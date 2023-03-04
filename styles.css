@@ -458,3 +458,42 @@ h6 { font-size: 16px;}
         margin-bottom: 50px;
     }
 }
+
+@media screen and (max-width: 550px) {
+
+	.intro-wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+			'right-column'            
+            'left-column' 
+			'nav-wrapper'           
+        ;
+    }
+
+	#profile_pic {
+		width: 250px;
+		height: 250px;
+	}
+
+    .right-column {
+		width: 250px;
+		align-items:end;		
+		margin: auto;
+		margin-top: 20px;		
+    }
+
+	#preview {
+		width: 220px;
+		justify-content: center;
+		margin-left: -15px;
+	} 
+
+	#preview-shadow {
+		width: 250px;
+		justify-content: center;		
+	} 
+
+	.preview__self-introduction p:nth-child(13) {
+		display: none;
+	}
+}

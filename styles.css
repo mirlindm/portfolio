@@ -191,9 +191,17 @@ h6 { font-size: 16px;}
 	border:2px solid var(--borderColor);
 }
 
-#theme-options-wrapper {
+.social-links {	
 	display: flex;
 	justify-content: center;
+	gap: 20px;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
 }
 
 .theme-dot {
@@ -310,17 +318,18 @@ h6 { font-size: 16px;}
 	animation: fade-in 1s 2.7s backwards;
 }
 
-#theme-options-wrapper div:nth-child(1) {
-	animation: fade-in 1s 2.9s backwards;
-}
-#theme-options-wrapper div:nth-child(2) {
+.reach-out {
 	animation: fade-in 1s 3s backwards;
 }
-#theme-options-wrapper div:nth-child(3) {
-	animation: fade-in 1s 3.1s backwards;
+
+.social-links a:nth-child(1) {
+	animation: fade-in 1s 0.5s backwards;
 }
-#theme-options-wrapper div:nth-child(4) {
-	animation: fade-in 1s 3.2s backwards;
+.social-links a:nth-child(2) {
+	animation: fade-in 1s 0.6s backwards;
+}
+.social-links a:nth-child(3) {
+	animation: fade-in 1s 0.7s backwards;
 }
 
 #settings-note {
@@ -357,23 +366,16 @@ h6 { font-size: 16px;}
 }
 
 .about-wrapper {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-	padding-bottom: 50px;
-	padding-top: 50px;
-	gap:100px;
+	display: flex;
+	justify-content: center;	
+	gap: 50px;	
+	padding-bottom: 30px;	
 }
 
 #skills {
 	display: flex;
 	justify-content: space-evenly;
 	background-color: var(--previewShadow);
-}
-
-.social-links {
-	display: grid;
-	align-content: center;
-	text-align: center;
 }
 
 #social_img {
@@ -457,10 +459,20 @@ h6 { font-size: 16px;}
         justify-content: center;
         margin-bottom: 50px;
     }
+
+	.about-wrapper {
+        flex-direction: column;
+        align-items: center;
+		gap: 0;		
+    }
+
+    .about-me,
+    .my-skillset {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 550px) {
-
 	.intro-wrapper {
         grid-template-columns: 1fr;
         grid-template-areas: 
